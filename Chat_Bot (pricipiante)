@@ -1,0 +1,33 @@
+import os #ele irá deixar as linhas organizadas, ou seja, tem a mesma ideia do \n
+
+def processar_resposta(resposta, nome):
+    if resposta == '1':
+        input(f'{os.linesep} Onde?, {nome} {os.linesep}')
+    elif resposta == '2':
+        print(f'{os.linesep}{nome}, Uma coisa que aprendi com a minha dona é fofocar{os.linesep}')
+        input(f'{os.linesep} me conte os minímos detalhes{os.linesep}')
+
+    elif resposta == '3':
+        input('Qual é o assunto?\n')
+    elif resposta == '4':
+        input(f'{os.linesep}{nome}, me conte que daqui alguns minutos a vossa majestade te atende{os.linesep}')
+    else:
+        print('Digite apenas 1, 2, 3 ou 4')
+
+
+def start():
+    print('Olá eu sou a pucca!\nInfelizmente, Kauane está ocupada :[\nMas estou aqui para te atender :D')
+    nome=input(f'Mas antes me informe o seu nome/nickname -> ')
+    while True:
+        resposta=input(f'Qual tipo de assunto você quer tratar com a vossa majestade kakau?:{os.linesep}[1] Rolê {os.linesep}[2] fofocalizar {os.linesep}[3] Bate-papo suave {os.linesep}[4] Assunto urgente{os.linesep}')
+        processar_resposta(resposta,nome)
+        x=input('Quer continuar? [S/N]: ').lower()
+        
+        
+
+
+
+
+
+if __name__ == '__main__':
+    start()
