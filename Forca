@@ -1,0 +1,29 @@
+print('**************************')
+print('bem-vido ao jogo da forca!')
+print('**************************')
+
+palavra=['romano']
+letra_corretas=['_ _ _ _ _ _']
+
+acertou=False
+enforcou=False
+erros=0
+
+while(not enforcou and not acertou):
+    chute=input('Qual a letra?: ')
+    posicao=0
+    for letra in palavra:
+        if (chute.upper()==letra.upper()):
+            letras_corretas[posicao] = letra
+            posicao += 1
+        else:
+            erros+=1
+        enforcou = erros == 6
+        acertou = '_' not in letra_corretas
+        print(letra_corretas)
+
+    if (acertou):
+        print('Você	ganhou!!')
+    else:
+        print('Você	perdeu!!')
+        print('Fim	do	jogo')
